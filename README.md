@@ -1,7 +1,7 @@
 ## IArray的备忘录
 
 ## Android相关
-* [ADB常用命令](https://iarray.github.io/blog/ADB.md) 
+* [ADB常用命令](https://iarray.github.io/blog/ADB) 
 
 
 ## C/C++

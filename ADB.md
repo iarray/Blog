@@ -22,7 +22,8 @@
 	adb install apk文件路径
 	
 	强制安装
-	adb install -r apk文件路径   
+	adb install -r apk文件路径  
+	 
 ## 5.卸载应用
 	adb uninstall packagename
 

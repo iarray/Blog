@@ -3,6 +3,7 @@
 ## Android相关
 * [ADB常用命令](https://iarray.github.io/blog/android/ADB) 
 * [Android服务](https://iarray.github.io/blog/android/Service) 
+* [Intent意图](https://iarray.github.io/blog/android/intent) 
 
 ## C/C++
 * 编译器

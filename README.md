@@ -2,10 +2,10 @@
 
 ## Android相关
 * 组件四件套 
-	* Activity-活动(界面)组件 
+	* [Activity-活动(界面)组件](https://iarray.github.io/blog/android/Activity) 
 	* [Android-服务组件](https://iarray.github.io/blog/android/Service) 
-	* BroadCast-广播组件
-	* ContentProvider-数据源组件
+	* [BroadCast-广播组件](https://iarray.github.io/blog/android/BroadCast)
+	* [ContentProvider-数据源组件](https://iarray.github.io/blog/android/ContentProvider)
 * 核心要点
 	* [Intent-意图](https://iarray.github.io/blog/android/intent)
 	* Handler-处理器

@@ -47,3 +47,18 @@
 	adb shell logcat
 
 * 可以通过adb后面加上 -s 设备号，指定对哪台设备执行adb指令
+
+## 8.双清
+	1.adb shell
+	2.su
+	3.wipe data
+	4.wipe cache
+	5.exit
+	6.exit
+	7.adb reboot
+
+## 9.重启到Recovery界面
+	adb reboot recovery
+
+## 10.重启到bootloader界面
+	adb reboot bootloader

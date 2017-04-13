@@ -58,20 +58,20 @@
                 TakeUntil(c => !ParserHelpers.IsWhitespace(c));
                 return Stay(EndSymbol(CSharpSymbolType.WhiteSpace));
             }
-			//IsIdentifierStart判断当前符合标识符的首字符吗?(a-zA-Z_)
+			//IsIdentifierStart判断当前字符符合标识符的首字符吗?(a-zA-Z_)
             else if (CSharpHelpers.IsIdentifierStart(CurrentCharacter))
             {	
 				//进入标识符状态,解析标识符
                 return Identifier();
             }
-			//IsDigit判断当前字符的是不是数字(0-9)
+			//IsDigit判断当前字符是不是数字(0-9)
             else if (Char.IsDigit(CurrentCharacter))
             {
 				//进入数字状态
                 return NumericLiteral();
             }
 			
-			//如果起始状态都不是上面的情况则,执行下面的代码
+			//如果起始状态下读入的第一个字符都不是上面的情况则,执行下面的代码
             switch (CurrentCharacter)
             {
                 case '@':
@@ -116,7 +116,7 @@
                         return Stay(EndSymbol(CSharpSymbolType.Slash));
                     }
                 default: 
-					// 解析运算符
+					// 解析运算符(+,-,*,/,&,|等等)
                     return Stay(EndSymbol(Operator()));
             }
         }
@@ -130,7 +130,7 @@
 5. 操作符(运算符,注释符等等)
 6. 空白字符(例如:空格)
 7. 换行符
-> 一般的编译器起始状态下遇到空白字符或换行符都会忽略
+> 大多数程序语言支持在代码中穿插任意多的空格和换行符,一般的编译器在起始状态下遇到空白字符或换行符都会忽略
 
 
 未完待续...

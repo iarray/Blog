@@ -22,9 +22,9 @@
 
 ## CSharp
 * Razor 源码分析
-	* [CSharp 词法分析](https://iarray.github.io/blog/git)
+	* [CSharp 词法分析](https://iarray.github.io/blog/csharp/compiler/tokenizer)
 
-### [Git](https://iarray.github.io/blog/csharp/compiler/tokenizer)
+### [Git](https://iarray.github.io/blog/git)
 
 
 > Last Updated 2017/4/16 9:42:51 

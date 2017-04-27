@@ -13,6 +13,10 @@
 * 其它
 	* [ADB常用命令](https://iarray.github.io/blog/android/ADB) 
 ## C/C++
+* [编写CGI - 利用CGIC](https://iarray.github.io/blog/cpp/cgic)
+* **libmicrohttpd** HTTP服务器
+	* [在线Doc](http://www.gnu.org/software/libmicrohttpd/manual/libmicrohttpd.html) 
+	* `MHD_start_daemon` 启动服务
 * 编译器
 	1. 词法分析 
 
@@ -24,7 +28,10 @@
 * Razor 源码分析
 	* [CSharp 词法分析](https://iarray.github.io/blog/csharp/compiler/tokenizer)
 
-### [Git](https://iarray.github.io/blog/git)
+## 嵌入式Linux
+* [WatchDog - 看门狗](https://iarray.github.io/blog/linux/watchdog)
+
+## [Git](https://iarray.github.io/blog/git)
 
 
 > Last Updated 2017/4/16 9:42:51 

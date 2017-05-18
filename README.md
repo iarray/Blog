@@ -28,8 +28,10 @@
 * Razor 源码分析
 	* [CSharp 词法分析](https://iarray.github.io/blog/csharp/compiler/tokenizer)
 
-## 嵌入式Linux
+## Linux
 * [WatchDog - 看门狗](https://iarray.github.io/blog/linux/watchdog)
+* [Shadowsocks - 科学上网](https://iarray.github.io/blog/linux/shadowsocks)
+* [ufw - 防火墙](https://iarray.github.io/blog/linux/firewall) 
 
 ## [Git](https://iarray.github.io/blog/git)
 

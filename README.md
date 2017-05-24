@@ -28,6 +28,10 @@
 * Razor 源码分析
 	* [CSharp 词法分析](https://iarray.github.io/blog/csharp/compiler/tokenizer)
 
+## Python
+* [基础](https://iarray.github.io/blog/python/basis)
+* [高级特性](https://iarray.github.io/blog/python/feature)
+
 ## Linux
 * [WatchDog - 看门狗](https://iarray.github.io/blog/linux/watchdog)
 * [Shadowsocks - 科学上网](https://iarray.github.io/blog/linux/shadowsocks)

@@ -276,6 +276,9 @@ ubuntu 16.04位置不一样,可以使用下面的
 启动ssmgr
 
 	screen -dmS ss-manager ss-manager -m $method -u --manager-address 127.0.0.1:6001
+	或
+	screen -dmS ss-manager ss-server --manager-address 127.0.0.1:6001 -c /etc/shadowsocks-libev/config.json -u
+
 	screen -dmS ssmgr ssmgr -c ~/.ssmgr/default.yml
 	screen -dmS webgui ssmgr -c ~/.ssmgr/webgui.yml
 

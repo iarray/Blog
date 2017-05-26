@@ -139,34 +139,49 @@ ss-mgr 推荐使用ss-libev版本,上面提到的是python版的安装
 
 安装ss-libev
 
-		sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev
-		sudo apt-get update
-		sudo apt install shadowsocks-libev
+	sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev
+	sudo apt-get update
+	sudo apt install shadowsocks-libev
 
 如果提示`add-apt-repository not found` 请先安装下面的:
 
-		apt-get install python-software-properties 
-		apt-get install software-properties-common 
+	apt-get install python-software-properties 
+	apt-get install software-properties-common 
 
 安装node.js (6.0以上版本)
 	
-		curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-		sudo apt-get install -y nodejs
+	curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+	sudo apt-get install -y nodejs
+
 如果 `node` 命令使用不了, 但nodejs命令可以用,执行下面的
 		
-		sudo ln -s /usr/bin/nodejs /usr/bin/node
+	sudo ln -s /usr/bin/nodejs /usr/bin/node
+
+或者下载官方安装包进行安装(适用于所有系统)
+
+	cd /usr/local/src/
+	wget https://nodejs.org/dist/v6.10.3/node-v6.10.3-linux-x64.tar.xz
+	tar xvf node-v6.10.3-linux-x64.tar.xz
+	
+	vi /etc/profile
+在下面加上
+		
+	export NODE_HOME=/usr/local/src/node-v6.10.3-linux-x64
+	export PATH=$PATH:$NODE_HOME/bin  
+	export NODE_PATH=$NODE_HOME/lib/node_modules 		
+
 
 安装npm
 
-		apt-get install npm
+	apt-get install npm
 
 安装SSMGR
 	
-		npm i -g shadowsocks-manager
-		ln -s /usr/local/nodejs/node-v6.9.1-linux-x64/bin/ssmgr /usr/local/bin/ssmgr
+	npm i -g shadowsocks-manager
+	ln -s /usr/local/nodejs/node-v6.9.1-linux-x64/bin/ssmgr /usr/local/bin/ssmgr
 ubuntu 16.04位置不一样,可以使用下面的
-	
-		ln -s /usr/local/nodejs/node-v6.9.1-linux-x64/bin/ssmgr /usr/local/lib/ssmgr
+
+	ln -s /usr/local/nodejs/node-v6.9.1-linux-x64/bin/ssmgr /usr/local/lib/ssmgr
 
 
 

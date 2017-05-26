@@ -32,6 +32,9 @@
 * [基础](https://iarray.github.io/blog/python/basis)
 * [高级特性](https://iarray.github.io/blog/python/feature)
 
+## Javascript
+* [ECMAScript6](http://es6.ruanyifeng.com/#docs/)
+
 ## Linux
 * [WatchDog - 看门狗](https://iarray.github.io/blog/linux/watchdog)
 * [Shadowsocks - 科学上网](https://iarray.github.io/blog/linux/shadowsocks)

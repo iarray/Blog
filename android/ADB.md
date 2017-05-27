@@ -62,3 +62,8 @@
 
 ## 10.重启到bootloader界面
 	adb reboot bootloader
+
+## 11. 修改分辨率
+	adb shell wm size 480x800 
+以上不能用试下
+	adb shell am display-size 720x1280

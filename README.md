@@ -36,6 +36,7 @@
 * [ECMAScript6](http://es6.ruanyifeng.com/#docs/)
 
 ## Linux
+* [Shell脚本](https://iarray.github.io/blog/linux/shell)
 * [WatchDog - 看门狗](https://iarray.github.io/blog/linux/watchdog)
 * [Shadowsocks - 科学上网](https://iarray.github.io/blog/linux/shadowsocks)
 * [ufw - 防火墙](https://iarray.github.io/blog/linux/firewall) 

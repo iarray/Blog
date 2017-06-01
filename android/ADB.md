@@ -18,6 +18,8 @@
 
 	adb pull 源文件路径 目标文件路径
 
+3,4操作如果提示read-only, 请先挂载一下,即执行 `adb remount`
+
 ## 4.安装APK到设备上
 	adb install apk文件路径
 	
@@ -67,3 +69,7 @@
 	adb shell wm size 480x800 
 以上不能用试下
 	adb shell am display-size 720x1280
+
+重置分辨率
+
+	adb shell wm size reset

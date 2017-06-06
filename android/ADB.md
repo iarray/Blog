@@ -73,3 +73,9 @@
 重置分辨率
 
 	adb shell wm size reset
+
+## 12. 查找文件	
+	
+	adb shell
+	
+	busybox find . -name "filename"

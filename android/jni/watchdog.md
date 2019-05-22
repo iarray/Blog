@@ -1,4 +1,4 @@
-jni代码:
+JNI代码:
 ```c++
 
 #include "com_android_hardware_watchdog.h"
@@ -43,3 +43,6 @@ JNIEXPORT void JNICALL Java_com_android_hardware_WatchDog_feedDog (JNIEnv *env, 
 }
 
 ```
+
+Java代码
+

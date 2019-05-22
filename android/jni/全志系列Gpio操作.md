@@ -60,6 +60,7 @@ public class AllwinnerGpio {
 
 //PL9输出高电平
 AllwinnerGpio.writeGpio("PL9", 1);
-
+//读取IO电平
+int value = AllwinnerGpio.readGpio("PB3");
 
 ```

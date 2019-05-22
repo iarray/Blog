@@ -165,8 +165,6 @@ import com.soben.hardware.tools.ShellTools;
 /**
  *  Auth: HPH
  *  Date: 2018-12-7
- *  (这里的代码只用作保留,并没有真正使用上)
- *  这个是我用开发板时候调试Gpio用到的代码,后面奥骏威的主板就不能用这个操作处理了,因为App权限不足
  *
  * 1. 查看GPIO状态
  *  cat /sys/kernel/debug/gpio
@@ -186,7 +184,7 @@ import com.soben.hardware.tools.ShellTools;
  *
  *  引脚号说明:
  *      如果使想用GPIO8_9
- *      那么GPIO Number就是 8 x 32 + 9 = 265
+ *      那么GPIO8_9 Number就是 8 x 32 + 9 = 265
  */
 public class Gpio
 {

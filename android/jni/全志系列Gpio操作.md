@@ -58,8 +58,8 @@ public class AllwinnerGpio {
 调用实例
 ```java
 
-/
- AllwinnerGpio.writeGpio("PL9", 1);
+//PL9输出高电平
+AllwinnerGpio.writeGpio("PL9", 1);
 
 
 ```

@@ -98,11 +98,11 @@ public class MyApplication extends Application {
         fd = WatchDog.init(45,15);
         if (fd>0){
             WatchDog.feedDog(fd);
-            Log.i("zhongnan", "看门狗启动成功");
-            handler.sendEmptyMessageDelayed(0, 10000);
+            Log.i("hph", "看门狗启动成功");
+            handler.sendEmptyMessage(0);
         }
         else {
-            Log.i("zhongnan", "看门狗启动失败");
+            Log.i("hph", "看门狗启动失败");
         }
     }
 }

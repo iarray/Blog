@@ -44,11 +44,10 @@ JNIEXPORT void JNICALL Java_com_android_hardware_WatchDog_feedDog (JNIEnv *env, 
 
 ```
 
-An
+Android.mk代码
 ```makefile
 LOCAL_PATH := $(call my-dir)
 
-NDK_PATH := E:\Android\android-ndk-r16b
 include $(CLEAR_VARS)
 LOCAL_MODULE    := watchdog_jni
 LOCAL_LDLIBS += -L$(SYSROOT)/usr/lib -llog

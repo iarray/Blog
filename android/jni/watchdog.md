@@ -45,4 +45,31 @@ JNIEXPORT void JNICALL Java_com_android_hardware_WatchDog_feedDog (JNIEnv *env, 
 ```
 
 Java代码
+```java
 
+package com.android.hardware;
+
+public class WatchDog {
+    /**
+     *  初始化看门狗(interval+margin秒内不喂狗就重启)
+     * @param interval interval:看门狗时间如5秒
+     * @param margin margin 时间间隙如3秒
+     * @return
+     */
+    public final static native int init(int interval, int margin);
+
+    /**
+     * 喂狗
+     * @param fd
+     * @return
+     */
+    public final static native int feedDog(int fd);
+    static{
+        System.loadLibrary("watchdog_jni");
+    }
+}
+
+
+```
+
+调用

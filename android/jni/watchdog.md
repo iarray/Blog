@@ -1,4 +1,5 @@
 jni代码:
+```c++
 
 #include "com_android_hardware_watchdog.h"
 #define  LOG_TAG    "watch_dog"
@@ -36,7 +37,9 @@ JNIEXPORT jint JNICALL Java_com_android_hardware_WatchDog_init(JNIEnv *env, jobj
     return fd;
 }
 
-JNIEXPORT void JNICALL Java_com_zhongnan_hardware_WatchDog_feedDog (JNIEnv *env, jobject obj, jint fd)
+JNIEXPORT void JNICALL Java_com_android_hardware_WatchDog_feedDog (JNIEnv *env, jobject obj, jint fd)
 { 
     write(fd, "", 1);
 }
+
+```

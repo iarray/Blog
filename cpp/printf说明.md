@@ -16,7 +16,7 @@ g | float(double) | 根据数值的长度，选择以最短的方式输出，%f�
 G | float(double) | 根据数值的长度，选择以最短的方式输出，%f或%E | printf("%G %G",0.000000123,0.123);输出1.23E-07 0.123
 c | char | 字符型。可以把输入的数字按照ASCII码相应转换为对应的字符 | printf("%c\n",64)输出A
 s | char* | 字符串。输出字符串中的字符直至字符串中的空字符（字符串以空字符’\0‘结尾） | printf("%s","测试test");输出：测试test
-S | wchar_t* | 宽字符串。输出字符串中的字符直至字符串中的空字符（宽字符串以两个空字符’\0‘结尾） | setlocale(LC_ALL,"zh_CN.UTF-8");wchar_t wtest[]=L"测试Test";printf("%S\n",wtest);输出：测试test
+S | wchar_t* | 宽字符串。输出字符串中的字符直至字符串中的空字符（宽字符串以两个空字符’\0‘结尾） | setlocale(LC_ALL,"zh_CN.UTF-8");<br>wchar_t wtest[]=L"测试Test";<br>printf("%S\n",wtest);输出：测试test
 p | void* | 以16进制形式输出指针 | printf("%010p","lvlv");输出：0x004007e6
 n | int* | 什么也不输出。%n对应的参数是一个指向signed int的指针，在此之前输出的字符数将存储到指针所指的位置 | int num=0;<br>printf("lvlv%n",&num);printf("num:%d",num);输出:lvlvnum:4
 % | 字符% | 输出字符‘%’（百分号）本身 | printf("%%");输出:%

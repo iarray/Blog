@@ -21,3 +21,7 @@ n | int* | 什么也不输出。%n对应的参数是一个指向signed int的指
 % | 字符% | 输出字符‘%’（百分号）本身 | printf("%%");输出:%
 m | 无 | 打印errno值对应的出错内容 | printf("%m\n");
 a/A | float(double) | 十六进制p计数法输出浮点数，a为小写，A为大写 | printf("%a %A",15.15,15.15);输出：0x1.e4ccccccccccdp+3 0X1.E4CCCCCCCCCCDP+3
+
+
+2.2标志（flags）
+

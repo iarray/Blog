@@ -29,6 +29,9 @@ docker run --name wordpress -d -p 80:80 --link mysql-wordpress:mysql -v /root/wo
 
 5. 进入Mysql容器
 ```shell
-docker ex
+docker exec -it mysql-wordpress bash
+mysql -u root -p
+//输入密码
+CREATE DATABASE IF NOT EXISTS wordpress default charset utf8 COLLATE utf8_general_ci;
 
 ```

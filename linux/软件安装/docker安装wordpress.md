@@ -19,6 +19,8 @@ docker run --name mysql-wordpress -d -v /root/mysql-data:/var/lib/mysql -e MYSQL
 
 4. 运行wordpress并链接mysql
 ```shell
+cd /root
+mkdir wordpress-html
 docker run --name wordpress -d -p 80:80 --link mysql-wordpress:mysql -v /root/wordpress-html:/var/www/html wordpress
 
 ```

@@ -13,7 +13,7 @@ docker pull wordpress
 ```shell
 cd /root
 mkdir mysql-data
-docker run --name mysql-wordpress -d -p 80:80 -v /root/mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD="123456" mysql
+docker run --name mysql-wordpress -d -p 8844:3306 -v /root/mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD="123456" mysql
 ```
 解释一下参数，--name就是给容器取名字。-d就是把它放在后台运行，-v加上后面的目录表示把容器中的/var/lib/mysql目录和宿主机中的/root/mysql-data目录做映射，把数据库数据保存在本地，-e后面加的参数就是设置mysql的密码，最后就是使用的镜像的名字
 

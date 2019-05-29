@@ -38,4 +38,8 @@ $ sudo systemctl start docker
 $ sudo systemctl enable docker
 ```
 
-9. 
+9. 验证安装成功
+```shell
+$ docker version
+```
+

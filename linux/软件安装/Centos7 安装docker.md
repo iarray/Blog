@@ -27,6 +27,7 @@ $ sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/do
 $ yum list docker-ce --showduplicates | sort -r
 ```
 7. 安装docker
-
-
-
+```shell
+$ sudo yum install docker-ce  #由于repo中默认只开启stable仓库，故这里安装的是最新稳定版17.12.0
+$ sudo yum install <FQPN>  # 例如：sudo yum install docker-ce-17.12.0.ce
+```

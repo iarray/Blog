@@ -7,9 +7,14 @@
 ```
 
 2. 使用 root 权限登录 Centos。确保 yum 包更新到最新。
+```shell
+ $ sudo yum -r
+```
 3. 卸载旧版本
 4. 安装需要的软件包
-5. 
+5. 设置yum源
+6. 查看可安装docker版本
+7. 安装docker
 
 
 

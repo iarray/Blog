@@ -15,7 +15,7 @@ cd /root
 mkdir mysql-data
 docker run --name mysql-wordpress -d -p 8844:3306 -v /root/mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD="123456" --privileged=true mysql
 
-docker run --name mysql-wordpress -d -p 8844:3306 -v $PWD/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=Sa123123 --name mysql5719 -d 
+docker run --name mysql-wordpress -d -p 8844:3306 -v /root/mysql-data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=Sa123123 mysql:5.7
 ```
 解释一下参数，
 * --name就是给容器取名字。

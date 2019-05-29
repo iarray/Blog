@@ -27,7 +27,7 @@ docker run --name mysql-wordpress -d -p 8844:3306 -v /root/mysql-data:/var/lib/m
 ```shell
 cd /root
 mkdir wordpress-html
-docker run --name wp -d -p 80:80 --link mysql-wordpress:mysql -v /root/wordpress-html:/var/www/html wordpress
+docker run --name mywp -d -p 8846:80 --link mysql-wordpress:mysql -v /root/wordpress-html:/var/www/html wordpress
 
 ```
 

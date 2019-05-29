@@ -1,7 +1,7 @@
 ## docker安装wordpress
-1. 下载mysql容器,指定版本5.6
+1. 下载mysql容器
 ```shell
-docker pull mysql:5.6
+docker pull mysql
 ```
 
 2. 下载wordpress容器
@@ -13,7 +13,7 @@ docker pull wordpress
 ```shell
 cd /root
 mkdir mysql-data
-docker run --name mysql-wordpress -d -p 8844:3306 -v /root/mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD="123456" --privileged=true mysql:5.6
+docker run --name mysql-wordpress -d -p 8844:3306 -v /root/mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD="123456" --privileged=true mysql
 ```
 解释一下参数，
 * --name就是给容器取名字。

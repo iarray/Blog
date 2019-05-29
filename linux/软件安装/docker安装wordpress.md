@@ -13,5 +13,11 @@ docker pull wordpress
 ```shell
 docker run --name mysql-wordpress -d -v /root/mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD="woyaoxuehuilinux" hypriot/rpi-mysql
 ```
+解释一下参数，--name就是给容器取名字。-d就是把它放在后台运行，-v加上后面的目录表示把容器中的/var/lib/mysql目录和宿主机中的/root/mysql-data目录做映射，把数据库数据保存在本地，-e后面加的参数就是设置mysql的密码，最后就是使用的镜像的名字
+
+作者：bboysoul
+链接：https://www.jianshu.com/p/cdd94d6c2d68
+来源：简书
+简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
 
 4. 运行wordpress并链接mysql

@@ -8,10 +8,16 @@
 
 2. 使用 root 权限登录 Centos。确保 yum 包更新到最新。
 ```shell
- $ sudo yum -r
+ $ sudo yum update
 ```
 3. 卸载旧版本
+```shell
+ $ sudo yum remove docker  docker-common docker-selinux docker-engine
+```
 4. 安装需要的软件包
+```shell
+$ sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+```
 5. 设置yum源
 6. 查看可安装docker版本
 7. 安装docker

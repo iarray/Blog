@@ -29,6 +29,7 @@ cd /root
 mkdir wordpress-html
 docker run --name wp -d -p 80:80 --link mysql-wordpress:mysql -v /root/wordpress-html:/var/www/html wordpress
 
+docker run -d --name wp -e WORDPRESS_DB_HOST=mysql -e WORDPRESS_DB_PASSWORD=123456 -p 80:80 --link mysql-wordpress:mysql wordpress
 
 
 ```

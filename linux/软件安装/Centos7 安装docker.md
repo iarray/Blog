@@ -31,3 +31,11 @@ $ yum list docker-ce --showduplicates | sort -r
 $ sudo yum install docker-ce  #由于repo中默认只开启stable仓库，故这里安装的是最新稳定版17.12.0
 $ sudo yum install <FQPN>  # 例如：sudo yum install docker-ce-17.12.0.ce
 ```
+
+8. 启动并加入开机启动
+```shell
+$ sudo systemctl start docker
+$ sudo systemctl enable docker
+```
+
+9. 

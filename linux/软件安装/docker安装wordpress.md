@@ -21,13 +21,15 @@ docker run --name mysql-wordpress -d -p 8844:3306 -v /root/mysql-data:/var/lib/m
 * -v加上后面的目录表示把容器中的/var/lib/mysql目录和宿主机中的/root/mysql-data目录做映射，把数据库数据保存在本地，
 * -e后面加的参数就是设置mysql的密码，最后就是使用的镜像的名字
 * -p: 端口映射，8844表示宿主，3306表示容器中的端口。 这里表示将宿主机的8844映射给镜像的3306.
---privileged=true: CentOS系统下的安全Selinux禁止了一些安全权限，导致MySQL容器在运行时会因为权限不足而报错，所以需要增加该选项
+* --privileged=true: CentOS系统下的安全Selinux禁止了一些安全权限，导致MySQL容器在运行时会因为权限不足而报错，所以需要增加该选项
 
 4. 运行wordpress并链接mysql
 ```shell
 cd /root
 mkdir wordpress-html
 docker run --name wp -d -p 80:80 --link mysql-wordpress:mysql -v /root/wordpress-html:/var/www/html wordpress
+
+
 
 ```
 

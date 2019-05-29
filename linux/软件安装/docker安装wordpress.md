@@ -31,7 +31,6 @@ docker run --name wp -d -p 80:80 --link mysql-wordpress:mysql -v /root/wordpress
 
 docker run -d --name wp -e WORDPRESS_DB_HOST=mysql -e WORDPRESS_DB_PASSWORD=123456 -p 80:80 --link mysql-wordpress:mysql wordpress
 
-
 ```
 
 还是先解释下参数--name就是给容器取名字，-d就是把容器放在后台运行-p表示容器的80端口和宿主机的80端口做映射--link表示和刚才生成的mysql容器做连接，-v表示把网站的目录和宿主机中的/root/wordpress-html做映射最后就是要使用的镜像的名字了

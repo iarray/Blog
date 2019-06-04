@@ -16,7 +16,8 @@ object-c的关键字均以@符号标注
 ```object-c
 @interface MyClass:NSObject{ 
   // 类变量声明
-  int age;
+  @private //变量的属性
+    int age;
 }
 // 类属性声明
 @property(copy) int age;

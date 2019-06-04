@@ -8,6 +8,8 @@
 
 ### 接口和实现
 在oc中一般类就是指接口,接口定义一般在.h文件中, 接口实现一般在.m文件中
+
+接口声明
 ```object-c
 @interface MyClass:NSObject{ 
 // 类变量声明
@@ -16,4 +18,10 @@
 // 类方法和声明
 @end
 
+```
+接口实现
+```object-c
+@implementation MyClass
+// 类方法定义
+@end
 ```

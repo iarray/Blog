@@ -19,6 +19,8 @@
 @property(copy) int a;
 
 // 类方法和声明
+//
+-(void)init:(int)age;
 
 @end
 

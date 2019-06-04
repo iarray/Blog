@@ -13,16 +13,18 @@
 ```object-c
 @interface MyClass:NSObject{ 
   // 类变量声明
-  int a;
+  int age;
 }
 // 类属性声明
-@property(copy) int a;
+@property(copy) int age;
 
 // 实例方法
 // 语法:-(returnType)methodName:(typeName) var1 :(typeName)var2;
 -(void)init:(int)age;
 
-//类方法到声明(
+// 类方法到声明(即静态方法)
+// 语法:+(returnType)methodName:(typeName) var1 :(typeName)var2;
+-(void)init:(int)age;
 
 @end
 

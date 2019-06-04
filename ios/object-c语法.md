@@ -12,7 +12,8 @@
 接口声明
 ```object-c
 @interface MyClass:NSObject{ 
-// 类变量声明
+  // 类变量声明
+  int a;
 }
 // 类属性声明
 // 类方法和声明

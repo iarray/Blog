@@ -62,4 +62,20 @@ object-c中到self代表自身, 相当于java到this
 super代表父类,和java一样
 
 ### 构造函数和析构函数
-在C++中的类构造和析构函数和类名相关,
+在C++中的类构造和析构函数和类名相关,而在object-c中,构造函数和析构函数是固定的
+```object-c
+-(id) init
+{
+    if (self = [super init])
+    {
+
+    }
+    return self;
+}
+
+-(void) dealloc
+{
+    [super dealloc];
+}
+```
+

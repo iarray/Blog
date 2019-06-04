@@ -67,6 +67,6 @@
 		cd ~
 		mkdir .ssh
 		ssh-keygen
-
+3. 根据提示输入内容, 可以直接按下回车键
 
 		

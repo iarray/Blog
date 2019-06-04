@@ -29,9 +29,13 @@
 @end
 
 ```
-接口实现(以@
+接口实现(以@implementation开头, @end结尾)
 ```object-c
 @implementation MyClass
 // 类方法定义
+-(void)init:(int)age
+{
+
+}
 @end
 ```

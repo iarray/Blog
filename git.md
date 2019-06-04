@@ -68,6 +68,9 @@
 		mkdir .ssh
 		ssh-keygen
 3. 根据提示输入内容, 也可以直接按下回车键
-4. 查看公钥,并
+4. 查看公钥
+
+		cat ~/.ssh/id_rsa.pub
+
 
 		

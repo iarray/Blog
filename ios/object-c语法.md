@@ -24,7 +24,7 @@ object-c的关键字均以@符号标注
 
 // 实例方法
 // 语法:-(returnType)methodName:(typeName) var1 :(typeName)var2;
--(void)init:(int)age;
+-(void)call:(int)age;
 
 // 类方法到声明(即静态方法)
 // 语法:+(returnType)methodName:(typeName) var1 :(typeName)var2;
@@ -37,7 +37,7 @@ object-c的关键字均以@符号标注
 ```object-c
 @implementation MyClass
 // 类方法定义
--(void)init:(int)age
+-(void)call:(int)age
 {
 
 }
@@ -61,3 +61,5 @@ ctx.method(5);
 object-c中到self代表自身, 相当于java到this
 super代表父类,和java一样
 
+### 构造函数和析构函数
+在C++中的类构造和析构函数和类名相关,

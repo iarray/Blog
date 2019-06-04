@@ -16,7 +16,10 @@
   int a;
 }
 // 类属性声明
+@property(copy) int a;
+
 // 类方法和声明
+
 @end
 
 ```

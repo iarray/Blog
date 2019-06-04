@@ -57,3 +57,6 @@ object-c的关键字均以@符号标注
 ctx.method(5);
 ```
 
+### self & super
+object-c中到self相当于java到this
+super和java一样

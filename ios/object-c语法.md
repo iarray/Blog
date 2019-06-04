@@ -18,9 +18,11 @@
 // 类属性声明
 @property(copy) int a;
 
-// 类方法和声明
-//
+// 实例方法
+// 语法:-(returnType)methodName:(typeName) var1 :(typeName)var2;
 -(void)init:(int)age;
+
+//类方法到声明(
 
 @end
 

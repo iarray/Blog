@@ -58,5 +58,6 @@ ctx.method(5);
 ```
 
 ### self & super
-object-c中到self相当于java到this
-super和java一样
+object-c中到self代表自身, 相当于java到this
+super代表父类,和java一样
+

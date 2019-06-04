@@ -62,4 +62,11 @@
 
 ### 8.ssh
 1. 打开git bash
+2. 输入
+
 		cd ~
+		mkdir .ssh
+		ssh-keygen
+
+
+		

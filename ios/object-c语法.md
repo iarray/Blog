@@ -9,7 +9,7 @@
 ### 接口和实现
 在oc中一般类就是指接口,接口定义一般在.h文件中, 接口实现一般在.m文件中
 
-接口声明
+接口声明(以@interface开头, @end结尾)
 ```object-c
 @interface MyClass:NSObject{ 
   // 类变量声明
@@ -24,12 +24,12 @@
 
 // 类方法到声明(即静态方法)
 // 语法:+(returnType)methodName:(typeName) var1 :(typeName)var2;
--(void)init:(int)age;
++(int)add:(int)a:(int)b;
 
 @end
 
 ```
-接口实现
+接口实现(以@
 ```object-c
 @implementation MyClass
 // 类方法定义

@@ -47,5 +47,9 @@ object-c的关键字均以@符号标注
 在object-c中,函数调用使用中括号包住,例如:
 ```object-c
 [ctx method:5];
-
 ```
+相当于java, c++
+```java
+ctx.method(
+```
+

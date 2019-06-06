@@ -54,6 +54,10 @@ $ gcc -S main.c
 //生成汇编语言文件
 main.s
 ```
+如果想把C语言变量的名称作为汇编语言语句中的注释，可以加上-fverbose-asm选项：
+```shell
+$ gcc -S -fverbose-asm circle.c
+```
 
 
 * -I path : 引用非标准位置的头文件需要,需要在编译的时候指定这些头文件的位置

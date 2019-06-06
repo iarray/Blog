@@ -58,10 +58,10 @@ $ gcc main.c -o main.out /usr/lib/libm.a
 //链接单个文件
 $ gcc main.c -o main.out /usr/lib/libm.a
 
-//链接目录
+//链接目录,并搜索
 $ gcc main.c -o main.out -L/usr/lib -lm
 ```
-
+最后也可以把包括所需链接库的目录加到环境变量 LIBRARYPATH 中。
 
 * -S 生成汇编语言
 通常情况下，GCC 把汇编语言输出存储到临时文件中，并且在汇编器执行完后立刻删除它们。但是可以使用-S选项，让编译程序在生成汇编语言输出之后立刻停止。

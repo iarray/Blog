@@ -36,6 +36,7 @@ $ gcc -c main.c -o a.o
 ```shell
 gcc func.o main.o -o app.out
 ```
-* 
+* -E 生成预处理文件
+
 * -I path : 引用非标准位置的头文件需要,需要在编译的时候指定这些头文件的位置
 * 

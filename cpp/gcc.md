@@ -51,7 +51,7 @@ $ gcc main.c -o main.out /usr/lib/libm.a
 //链接目录,并搜索
 $ gcc main.c -o main.out -L/usr/lib -lm
 ```
-最后也可以把包括所需链接库的目录加到环境变量 ==LIBRARYPATH== 中。
+最后也可以把包括所需链接库的目录加到环境变量**LIBRARYPATH**中。
 
 * -E 生成预处理文件
 在编译之前，会先由预处理器进行一些文本替换方面的操作，例如宏展开、文件包含、删除部分代码等。

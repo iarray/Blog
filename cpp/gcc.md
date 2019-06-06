@@ -13,6 +13,12 @@ gcc编译选项 | 选项的意义
 
 #### 选项说明
 * -o name : 告诉编译器可执行程序的名字
+```shell
+gcc [infile] -o [outfile]
+//例如
+$ gcc main.c func.c -o app.out
+```
+
 * -c : 只编译不链接，仅生成目标文件(目标文件是一种中间文件或者临时文件，如果不设置该选项，gcc 一般不会保留目标文件，可执行文件生成完成后就自动删除了。)
 ```shell
 $gcc -c test1.c test2.c test3.c

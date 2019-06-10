@@ -70,4 +70,10 @@ xTaskCreate( vTask2, "Task 2", 1000, NULL, 1, NULL );
 for( ;; );
 }
 ```
+### 输出
+```txt
+Task
+
+```
+
 

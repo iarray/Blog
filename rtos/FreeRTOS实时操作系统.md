@@ -22,8 +22,9 @@ pxCreatedTask|pxCreatedTask 用于传出任务的句柄。这个句柄将在API�
 ```c
 void vTask1( void *pvParameters )
 {
-char *pcTaskName;
+  char *pcTaskName;
   volatile unsigned long ul;
+  pcTaskName = ( char * ) pvParameters;
   /* 和大多数任务一样，该任务处于一个死循环中。 */ 
   for( ;; )
   {

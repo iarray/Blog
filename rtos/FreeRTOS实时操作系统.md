@@ -18,3 +18,22 @@ uxPriority|指定任务执行的优先级。优先级的取值范围可以从最
 pxCreatedTask|pxCreatedTask 用于传出任务的句柄。这个句柄将在API调用中对该创建出来的任务进行引用，比如改变任务优先级，或者删除任务。<br>如果应用程序中不会用到这个任务的句柄，则 pxCreatedTask 可以被设为 NULL。
 返回值|有两个可能的返回值:<br>1. pdTRUE表明任务创建成功。<br>2. errCOULD_NOT_ALLOCATE_REQUIRED_MEMORY 由于内存堆空间不足，FreeRTOS 无法分配足够的空间来保存任务结构数据和任务栈，因此无法创建任务。
 
+### 示例
+```c
+void vTask1( void *pvParameters )
+{
+const char *pcTaskName = "Task 1 is running\r\n";
+volatile unsigned long ul;
+/* 和大多数任务一样，该任务处于一个死循环中。 */ for( ;; )
+{
+} }
+/* Print out the name of this task. */
+vPrintString( pcTaskName );
+/* 延迟，以产生一个周期 */
+for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ ) {
+/* 这个空循环是最原始的延迟实现方式。在循环中不做任何事情。后面的示例程序将采用
+delay/sleep函数代替这个原始空循环。 */ }
+
+
+```
+

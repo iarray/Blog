@@ -16,4 +16,4 @@ usStackDepth|当任务创建时，内核会分为每个任务分配属于任务�
 pvParameters|pvParameters 的值即是传递到任务中的值(void指针(void*))
 uxPriority|指定任务执行的优先级。优先级的取值范围可以从最低优先级 0 到 最高优先级(configMAX_PRIORITIES – 1)。<br>configMAX_PRIORITIES 是一个由用户定义的常量。优先级号并没有上限(除了受限于采用的数据类型和系统的有效内存空间)，但最好使用实际需要的最小数值以避免内存浪费。如果 uxPriority 的值超过了(configMAX_PRIORITIES – 1)，将会导致实际赋给任务的优先级被自动封顶到最大合法值。
 pxCreatedTask|pxCreatedTask 用于传出任务的句柄。这个句柄将在API调用中对该创建出来的任务进行引用，比如改变任务优先级，或者删除任务。<br>如果应用程序中不会用到这个任务的句柄，则 pxCreatedTask 可以被设为 NULL。
-返回值|
+返回值|有两个可能的返回值:<br>1. pdTRUE表明任务创建成功。<br>2. errCOULD_NOT_ALLOCATE_REQUIRED_MEMORY 由于内存堆空间不足，FreeRTOS 无法分配足够的空间来保存任务结构数据和任务栈，因此无法创建任务。

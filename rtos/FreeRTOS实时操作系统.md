@@ -72,4 +72,21 @@ Task 2 is running
 
 调度器总是在可运行的任务中，选择具有最高优级级的任务，并使其进入运行态。
 到目前为止的示例程序中，两个任务都创建在相同的优先级上。所以这两个任务轮番进入和退出运行态。
+接下来修改优先级,在第一个任务创建在优先级 1 上，而另一个任务创建在优先级 2 上。
+```c
+/* 第一个任务创建在优先级1上。优先级是倒数第二个参数。 */
+xTaskCreate( vTaskFunction, "Task 1", 1000, (void*)pcTaskName1, 1, NULL );
+/* 第二个任务创建在优先级2上。 */
+xTaskCreate( vTaskFunction, "Task 2", 1000, (void*)pcTaskName2, 2, NULL );
+
+```
+### 输出
+```txt
+Task 1 is running
+Task 2 is running
+Task 1 is running
+Task 2 is running
+Task 1 is running
+Task 2 is running
+```
 

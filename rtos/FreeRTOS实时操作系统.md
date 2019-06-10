@@ -22,18 +22,36 @@ pxCreatedTask|pxCreatedTask 用于传出任务的句柄。这个句柄将在API�
 ```c
 void vTask1( void *pvParameters )
 {
-const char *pcTaskName = "Task 1 is running\r\n";
-volatile unsigned long ul;
-/* 和大多数任务一样，该任务处于一个死循环中。 */ for( ;; )
+  const char *pcTaskName = "Task 1 is running\r\n";
+  volatile unsigned long ul;
+  /* 和大多数任务一样，该任务处于一个死循环中。 */ 
+  for( ;; )
+  {
+  } 
+  /* Print out the name of this task. */
+  vPrintString( pcTaskName );
+  /* 延迟，以产生一个周期 */
+  for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ ) {
+  /* 这个空循环是最原始的延迟实现方式。在循环中不做任何事情。后面的示例程序将采用
+  delay/sleep函数代替这个原始空循环。 */ 
+  }
+}
+void vTask1( void *pvParameters )
 {
-} }
-/* Print out the name of this task. */
-vPrintString( pcTaskName );
-/* 延迟，以产生一个周期 */
-for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ ) {
-/* 这个空循环是最原始的延迟实现方式。在循环中不做任何事情。后面的示例程序将采用
-delay/sleep函数代替这个原始空循环。 */ }
-
+  const char *pcTaskName = "Task 1 is running\r\n";
+  volatile unsigned long ul;
+  /* 和大多数任务一样，该任务处于一个死循环中。 */ 
+  for( ;; )
+  {
+  } 
+  /* Print out the name of this task. */
+  vPrintString( pcTaskName );
+  /* 延迟，以产生一个周期 */
+  for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ ) {
+  /* 这个空循环是最原始的延迟实现方式。在循环中不做任何事情。后面的示例程序将采用
+  delay/sleep函数代替这个原始空循环。 */ 
+  }
+}
 
 ```
 

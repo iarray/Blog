@@ -22,6 +22,7 @@ pxCreatedTask|pxCreatedTask 用于传出任务的句柄。这个句柄将在API�
 ```c
 void vTask1( void *pvParameters )
 {
+char *pcTaskName;
   volatile unsigned long ul;
   /* 和大多数任务一样，该任务处于一个死循环中。 */ 
   for( ;; )
@@ -45,7 +46,7 @@ static const char *pcTaskName2 = "Task 2 is running\r\n";
 }
 xTaskCreate( vTask1, "Task 1",
              1000,
-             NULL,
+             (void*)pcTaskName1,
              1,
              NULL );
 /* 指向任务函数的指针 */
@@ -53,7 +54,7 @@ xTaskCreate( vTask1, "Task 1",
 /* 栈深度 – 大多数小型微控制器会使用的值会比此值小得多 */ /* 没有任务参数 */
 /* 此任务运行在优先级1上. */ /* 不会用到任务句柄 */
 /* Create the other task in exactly the same way and at the same priority. */
-xTaskCreate( vTask2, "Task 2", 1000, NULL, 1, NULL );
+xTaskCreate( vTask2, "Task 2", 1000, (void*)pcTaskName2, 1, NULL );
 /* 启动调度器，任务开始执行 */ vTaskStartScheduler();
 /* 如果一切正常，main()函数不应该会执行到这里。但如果执行到这里，很可能是内存堆空间不足导致空闲 任务无法创建。第五章有讲述更多关于内存管理方面的信息 */
 for( ;; );

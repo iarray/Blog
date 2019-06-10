@@ -44,13 +44,11 @@ static const char *pcTaskName1 = "Task 1 is running\r\n";
 static const char *pcTaskName2 = "Task 2 is running\r\n";
 
 /* 创建第一个任务。需要说明的是一个实用的应用程序中应当检测函数xTaskCreate()的返回值，以确保任 务创建成功。 */
-
-/* Create one of the two tasks. */
-xTaskCreate(
-/* 指向任务函数的指针. */ /* 任务名. */
-/* 栈深度. */
-vTaskFunction,
-"Task 1",
+  xTaskCreate(
+    vTaskFunction,/* 指向任务函数的指针. */ 
+"Task 1",/* 任务名. */
+    /* 栈深度. */
+  
 1000,
 (void*)pcTextForTask1, /* 通过任务参数传入需要打印输出的文本. */ 1, /* 此任务运行在优先级1上. */
 NULL ); /* 不会用到此任务的句柄. */

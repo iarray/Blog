@@ -22,7 +22,6 @@ pxCreatedTask|pxCreatedTask 用于传出任务的句柄。这个句柄将在API�
 ```c
 void vTask1( void *pvParameters )
 {
-  const char *pcTaskName = "Task 1 is running\r\n";
   volatile unsigned long ul;
   /* 和大多数任务一样，该任务处于一个死循环中。 */ 
   for( ;; )
@@ -37,21 +36,11 @@ void vTask1( void *pvParameters )
   }
 }
 
-void vTask2( void *pvParameters )
-{
-  const char *pcTaskName = "Task 2 is running\r\n";
-  volatile unsigned long ul;
-  for( ;; )
-  {
-  }
-  vPrintString( pcTaskName );
-  for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ ) {
-  
-  }
-}
-
 int main( void )
 {
+static const char *pcTaskName1 = "Task 1 is running\r\n";
+static const char *pcTaskName2 = "Task 2 is running\r\n";
+
 /* 创建第一个任务。需要说明的是一个实用的应用程序中应当检测函数xTaskCreate()的返回值，以确保任 务创建成功。 */
 }
 xTaskCreate( vTask1, "Task 1",

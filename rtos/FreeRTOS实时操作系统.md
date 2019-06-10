@@ -45,13 +45,13 @@ static const char *pcTaskName2 = "Task 2 is running\r\n";
 
 /* 创建第一个任务。需要说明的是一个实用的应用程序中应当检测函数xTaskCreate()的返回值，以确保任 务创建成功。 */
   xTaskCreate(
-    vTaskFunction,/* 指向任务函数的指针. */ 
-"Task 1",/* 任务名. */
-    /* 栈深度. */
-  
-1000,
-(void*)pcTextForTask1, /* 通过任务参数传入需要打印输出的文本. */ 1, /* 此任务运行在优先级1上. */
-NULL ); /* 不会用到此任务的句柄. */
+    vTaskFunction, /* 指向任务函数的指针. */ 
+    "Task 1", /* 任务名. */
+    1000, /* 栈深度. */
+    (void*)pcTaskName1, /* 通过任务参数传入需要打印输出的文本. */ 
+    1, /* 此任务运行在优先级1上. */
+    NULL /* 不会用到此任务的句柄. */
+);
 xTaskCreate( vTask2, "Task 2", 1000, (void*)pcTaskName2, 1, NULL );
 /* 启动调度器，任务开始执行 */ vTaskStartScheduler();
 /* 如果一切正常，main()函数不应该会执行到这里。但如果执行到这里，很可能是内存堆空间不足导致空闲 任务无法创建。第五章有讲述更多关于内存管理方面的信息 */

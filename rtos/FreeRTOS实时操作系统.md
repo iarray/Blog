@@ -113,7 +113,23 @@ void vTaskDelayUntil( portTickType * pxPreviousWakeTime, portTickType xTimeIncre
 参数|描述
 -|-
 pxPreviousWakeTime|记录上一次离开阻塞态(被唤醒)的时刻
-xTimeIncrement|执行任务时间(单位是心跳周期，可以使用常量 portTICK_RATE_MS 将毫秒转换为心跳周期
+xTimeIncrement|执行任务时间(单位是心跳周期，可以使用常量 portTICK_RATE_MS 将毫秒转换为心跳周期)
+
+示例
+```c
+void vTaskFunction( void *pvParameters )
+{
+  char *pcTaskName;
+  portTickType xLastWakeTime;
+  pcTaskName = ( char * ) pvParameters;
+/* 变量xLastWakeTime需要被初始化为当前心跳计数值。说明一下，这是该变量唯一一次被显式赋值。之后， xLastWakeTime将在函数vTaskDelayUntil()中自动更新。 */
+  xLastWakeTime = xTaskGetTickCount();
+    /* As per most tasks, this task is implemented in an infinite loop. */
+for( ;; ) {
+} }
+
+```
+
 
 ### 挂起状态
 “挂起(suspended)”也是非运行状态的子状态。处于挂起状态的任务对调度器而言

@@ -112,7 +112,7 @@ void vTaskDelayUntil( portTickType * pxPreviousWakeTime, portTickType xTimeIncre
 ```
 参数|描述
 -|-
-
+pxPreviousWakeTime|
 
 ### 挂起状态
 “挂起(suspended)”也是非运行状态的子状态。处于挂起状态的任务对调度器而言

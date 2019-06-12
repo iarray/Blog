@@ -104,7 +104,8 @@ void vTaskDelay( portTickType xTicksToDelay );
 
 参数|描述
 -|-
-vTaskDelay|
+xTicksToDelay|延迟多少个心跳周期。调用该延迟函数的任务将进入阻塞态，经 延迟指定的心跳周期数后，再转移到就绪态。<br>举个例子，当某个任务调用vTaskDelay( 100 )时，心跳计数值 为 10,000，则该任务将保持在阻塞态，直到心跳计数计到 10,100。<br>
+常数 portTICK_RATE_MS 可以用来将以毫秒为单位的时间值转 换为以心跳周期为单位的时间值。
 
 ### 挂起状态
 “挂起(suspended)”也是非运行状态的子状态。处于挂起状态的任务对调度器而言

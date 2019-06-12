@@ -97,7 +97,7 @@ Task 2 is running
 任务可以进入阻塞态以等待以下两种不同类型的事件:
 1. 定时(时间相关)事件——这类事件可以是延迟到期或是绝对时间到点。比如 说某个任务可以进入阻塞态以延迟 10ms。
 2. 同步事件——源于其它任务或中断的事件。比如说，某个任务可以进入阻塞 态以等待队列中有数据到来。同步事件囊括了所有板级范围内的事件类型。
-#### 延时
+#### 延时指定时间执行
 ```c
 void vTaskDelay( portTickType xTicksToDelay );
 ```
@@ -105,6 +105,14 @@ void vTaskDelay( portTickType xTicksToDelay );
 参数|描述
 -|-
 xTicksToDelay|延迟多少个心跳周期。调用该延迟函数的任务将进入阻塞态，经 延迟指定的心跳周期数后，再转移到就绪态。<br>举个例子，当某个任务调用vTaskDelay( 100 )时，心跳计数值 为 10,000，则该任务将保持在阻塞态，直到心跳计数计到 10,100。<br>常数 portTICK_RATE_MS 可以用来将以毫秒为单位的时间值转 换为以心跳周期为单位的时间值。
+
+#### 延时直到指定时间执行
+```c
+void vTaskDelayUntil( portTickType * pxPreviousWakeTime, portTickType xTimeIncrement );
+```
+参数|描述
+-|-
+
 
 ### 挂起状态
 “挂起(suspended)”也是非运行状态的子状态。处于挂起状态的任务对调度器而言

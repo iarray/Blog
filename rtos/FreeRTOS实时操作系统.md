@@ -122,11 +122,15 @@ void vTaskFunction( void *pvParameters )
   char *pcTaskName;
   portTickType xLastWakeTime;
   pcTaskName = ( char * ) pvParameters;
-/* 变量xLastWakeTime需要被初始化为当前心跳计数值。说明一下，这是该变量唯一一次被显式赋值。之后， xLastWakeTime将在函数vTaskDelayUntil()中自动更新。 */
+  /* 变量xLastWakeTime需要被初始化为当前心跳计数值。说明一下，这是该变量唯一一次被显式赋值。之后， xLastWakeTime将在函数vTaskDelayUntil()中自动更新。 */
   xLastWakeTime = xTaskGetTickCount();
-    /* As per most tasks, this task is implemented in an infinite loop. */
-for( ;; ) {
-} }
+   
+  for( ;; ) {
+    vPrintString( pcTaskName );
+    /* 本任务将精确的以250毫秒为周期执行。同vTaskDelay()函数一样，时间值是以心跳周期为单位的， 可以使用常量portTICK_RATE_MS将毫秒转换为心跳周期。变量xLastWakeTime会在 vTaskDelayUntil()中自动更新，因此不需要应用程序进行显示更新。 */
+    vTaskDelayUntil( &xLastWakeTime, ( 250 / portTICK_RATE_MS ) );
+  } 
+}
 
 ```
 

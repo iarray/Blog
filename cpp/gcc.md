@@ -93,7 +93,7 @@ $ ar rs libfunc.a func.o
 
 链接静态库
 ```shell
-$ gcc main.c -L 
+$ gcc main.c -L. -lfunc -Ifunc -o main
 
 ```
 

@@ -76,3 +76,6 @@ main.s
 ```shell
 $ gcc -S -fverbose-asm circle.c
 ```
+
+* -g 生成调试信息
+配合gdb调试程序

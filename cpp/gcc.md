@@ -85,6 +85,7 @@ $ gdb main
 ```
 
 ### 打包静态库
+下面的命令打包静态库libfunc.a
 ```shell
 $ gcc -c func.c
 $ ar rs libfunc.a func.o 

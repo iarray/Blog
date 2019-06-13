@@ -90,3 +90,10 @@ $ gdb main
 $ gcc -c func.c
 $ ar rs libfunc.a func.o 
 ```
+
+链接静态库
+```shell
+$ gcc main.c -L 
+
+```
+

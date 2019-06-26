@@ -10,6 +10,7 @@ gcc编译选项 | 选项的意义
 -o [file1] [file2] | 将文件 file2 编译成可执行文件 file1
 -I directory | 指定 include 包含文件的搜索目录
 -g | 生成调试信息，该程序可以被调试器调试
+-D | 定义编译参数
 
 #### 选项说明
 * -c : 只编译不链接，仅生成目标文件(目标文件是一种中间文件或者临时文件，如果不设置该选项，gcc 一般不会保留目标文件，可执行文件生成完成后就自动删除了。)
@@ -76,6 +77,14 @@ main.s
 ```shell
 $ gcc -S -fverbose-asm circle.c
 ```
+
+* -g 生成调试信息
+配合gdb调试程序
+```shell
+$ gcc -g main.c -o main
+$ gdb main
+```
+
 
 * -g 生成调试信息
 配合gdb调试程序

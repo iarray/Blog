@@ -105,6 +105,8 @@ int main()
 ```shell
 $ gcc -DHELLO main.c -o main
 $ gdb main
+& ./main
+HELLO defined
 ```
 
 ### 打包静态库

@@ -87,9 +87,23 @@ $ gdb main
 
 
 * -D 设置编译参数
-配合gdb调试程序
+main.c
+```c
+int main()
+{
+    #ifdef HELLO
+    printf("HELLO defined\n");
+    #else
+    printf("HELLO not define\n");
+    #endif
+
+    return 0;
+}
+
+```
+
 ```shell
-$ gcc -g main.c -o main
+$ gcc -DHELLO main.c -o main
 $ gdb main
 ```
 

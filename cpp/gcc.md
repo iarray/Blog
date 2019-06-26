@@ -86,7 +86,7 @@ $ gdb main
 ```
 
 
-* -g 生成调试信息
+* -D 设置编译参数
 配合gdb调试程序
 ```shell
 $ gcc -g main.c -o main

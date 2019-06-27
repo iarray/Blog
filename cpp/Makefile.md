@@ -118,7 +118,7 @@ main.o: main.c func.h
 ```
 
 ---
-make 参数赋值会覆盖
+在make命令后面为变量赋值会覆盖makefile里面的
 ```shell
 make CFLAGS=-g
 ```

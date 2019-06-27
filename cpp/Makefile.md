@@ -118,4 +118,10 @@ main.o: main.c func.h
 ```
 
 ---
+make 参数赋值会覆盖
+```shell
+make CFLAGS=-g
+```
+
+
 

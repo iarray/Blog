@@ -107,3 +107,8 @@ main:main.o func.o
 	gcc main.o func.o -o main
 ```
 
+---
+用gcc -M 选项自动生成目标文件和源文件的依赖关系.
+```language
+gcc
+```

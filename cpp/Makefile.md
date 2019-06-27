@@ -80,6 +80,9 @@ all:
 此外还有
 * += 赋值可以在原有的变量值基础上追加内容
 ```makefile
-
+a = Hello
+a += LiLi
+all:
+	@echo 
 ```
 

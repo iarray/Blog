@@ -23,6 +23,7 @@ main是这条规则的目标(Target),func.o main.o是这个规则的条件所有
 2. 某个条件修改时间比目标晚
 3. 某个条件需要更新
 
+---
 通常makefile都会有一个clean规则,用于清理编译生成的二进制文件.
 例如:
 ```makefile
@@ -35,6 +36,7 @@ clean:
 * 在命令前加@表示不输出命令本身, 只输出命令执行的结果
 * #号开头表示注释
 
+---
 对于多目标规则,make会拆成多条单目标规则处理,例如:
 ```makefile
 target1 target2:prerequisites1 prerequisites2
@@ -47,4 +49,10 @@ target1:prerequisites1 prerequisites2
 target2:prerequisites1 prerequisites2
 	command prerequisites1 -o target2
 ```
-这条规则命令列表是一样单,但是**$@**不同
+这条规则命令列表是一样单,但是 $@ 不同
+
+---
+隐含规则
+```mak
+
+```

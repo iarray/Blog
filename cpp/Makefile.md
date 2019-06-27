@@ -117,4 +117,5 @@ gcc -MM main.c
 main.o: main.c func.h
 ```
 
+---
 

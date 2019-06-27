@@ -83,6 +83,10 @@ all:
 a = Hello
 a += LiLi
 all:
-	@echo 
+	@echo $(a)
 ```
+输出 Hello LiLi
+
+---
+特殊
 

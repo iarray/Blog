@@ -61,4 +61,7 @@ b = LiLi
 all:
 	@echo $(a)
 ```
+执行make, 输出 
+> LiLi
 
+上面的例子可以看到a变量是定义在b

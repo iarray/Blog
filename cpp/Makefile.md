@@ -16,4 +16,4 @@ func.o:func.c func.h
 main.o:main.c
 	gcc -c main.c
 ```
-main是这条规则的目标(Target),func.o main.o是这个规则的条件
+main是这条规则的目标(Target),func.o main.o是这个规则的条件所有条件中只要有一个条件被更新了,目标也会随之被更新,所谓

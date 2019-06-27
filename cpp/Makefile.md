@@ -114,7 +114,7 @@ gcc -MM main.c
 ```
 输出
 ```language
-main.o: main.c \
-  func.h
+main.o: main.c func.h
 ```
+
 

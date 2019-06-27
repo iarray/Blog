@@ -35,7 +35,7 @@ clean:
 * 在命令前加@表示不输出命令本身, 只输出命令执行的结果
 * #号开头表示注释
 
-### 对于多目标规则,make会拆成多条单目标规则处理,例如:
+对于多目标规则,make会拆成多条单目标规则处理,例如:
 ```makefile
 target1 target2:prerequisites1 prerequisites2
 	command $< -o $@

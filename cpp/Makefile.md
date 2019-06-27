@@ -97,7 +97,12 @@ all:
 例如:
 ```makefile
 main:main.o func.o
-	gcc $
+	gcc $^ -o $@
 ```
 
+相当于:
+```makefile
+main:main.o func.o
+	gcc main.o func.o -o main
+```
 

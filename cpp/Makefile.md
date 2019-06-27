@@ -52,7 +52,5 @@ target2:prerequisites1 prerequisites2
 这条规则命令列表是一样单,但是 $@ 不同
 
 ---
-隐含规则
-```makefile
+隐含规则(自行百度)
 
-```

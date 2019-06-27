@@ -43,5 +43,8 @@ target1 target2:prerequisites1 prerequisites2
 相当于:
 ```makefile
 target1:prerequisites1 prerequisites2
-	command $< -o $@
+	command prerequisites1 -o target1
+target2:prerequisites1 prerequisites2
+	command prerequisites2 -o target2
+
 ```

@@ -37,5 +37,11 @@ clean:
 
 对于多目标规则,make会拆成多条单目标规则处理,例如:
 ```makefile
-target1 target2:prerequisites1 
+target1 target2:prerequisites1 prerequisites2
+	command $< -o $@
+```
+相当于:
+```makefile
+target1:prerequisites1 prerequisites2
+	command $< -o $@
 ```

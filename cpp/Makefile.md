@@ -28,6 +28,5 @@ main是这条规则的目标(Target),func.o main.o是这个规则的条件所有
 ```makefile
 clean:
 	rm main *.o
-
 ```
 

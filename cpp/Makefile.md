@@ -27,6 +27,7 @@ main是这条规则的目标(Target),func.o main.o是这个规则的条件所有
 例如:
 ```makefile
 clean:
+	@echo “cleaning ...”
 	-rm main *.o
 ```
-这里在命令前加 **-** 表示即使这条命令出错,make也会执行后续命令.因为有可能rm的文件不存在.一般mkdr和rm前面都加 **-** 
+这里在命令前加 **-** 表示即使这条命令出错,make也会执行后续命令.因为有可能rm的文件不存在.一般mkdir和rm前面都加 **-** ,对于

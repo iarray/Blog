@@ -23,8 +23,9 @@ version是镜像的标签,一般指版本号
 
 ### 停止容器
 ```shell
-docker stop containerName
+docker stop containerIdOrName
 ```
+容器的id或
 
 ### 查看正在运行的容器
 ```shell
@@ -36,4 +37,8 @@ docker ps
 docker images
 ```
 
+### 查看应用输出日志
+```shell
+docker log containerIdOrName
+```
 

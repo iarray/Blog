@@ -10,6 +10,11 @@ docker pull imageName:version
 imageName是镜像名称
 version是镜像的标签,一般指版本号
 
+### 通过dockerfile构建镜像
+```shell
+docker build dockerfile
+```
+
 
 ### 启动容器
 ```shell

@@ -1,8 +1,11 @@
 ### 拉取镜像
 ```shell
-docker pull imageName:ve
-
+docker pull imageName:version
 ```
+imageName是镜像名称
+version是镜像的标签,一般指版本号
+
+
 ### 启动容器
 ```shell
 docker run 

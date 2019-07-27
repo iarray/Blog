@@ -17,6 +17,10 @@ docker build dockerfile
 ```
 
 ### 设置镜像标签
+```shell
+docker tag containerIdOrName 
+
+```
 
 ---
 ## 容器使用

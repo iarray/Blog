@@ -25,12 +25,14 @@ version是镜像的标签,一般指版本号
 ```shell
 docker stop containerIdOrName
 ```
-容器的id或
+参数: 容器的id或名称
 
 ### 查看正在运行的容器
 ```shell
 docker ps
 ```
+可选参数:
+* -l 查看最近一次创建的容器
 
 ### 查看已下载的镜像
 ```shell
@@ -41,4 +43,6 @@ docker images
 ```shell
 docker log containerIdOrName
 ```
+参数: 容器的id或名称
+
 

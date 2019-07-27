@@ -26,3 +26,9 @@ version是镜像的标签,一般指版本号
 docker stop containerName
 ```
 
+### 查看正在运行的容器
+```shell
+docker p
+
+```
+

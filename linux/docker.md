@@ -1,3 +1,8 @@
+### 查找镜像
+```shell
+docker search imageName
+```
+
 ### 拉取镜像
 ```shell
 docker pull imageName:version

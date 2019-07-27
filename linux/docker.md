@@ -1,3 +1,4 @@
+## 镜像使用
 ### 查找镜像
 ```shell
 docker search imageName
@@ -15,7 +16,10 @@ version是镜像的标签,一般指版本号
 docker build dockerfile
 ```
 
+### 设置镜像标签
 
+---
+## 容器使用
 ### 启动容器
 ```shell
 docker run imageName:version

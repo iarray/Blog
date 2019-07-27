@@ -18,9 +18,9 @@ docker build dockerfile
 
 ### 设置镜像标签
 ```shell
-docker tag containerIdOrName 
-
+docker tag containerIdOrName user/repositoryName:newTag
 ```
+docker tag 镜像ID或名称 用户名称、镜像源名(repository name)和新的标签名(new tag)。
 
 ---
 ## 容器使用

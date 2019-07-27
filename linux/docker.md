@@ -21,4 +21,8 @@ version是镜像的标签,一般指版本号
 * -e 参数设置(KEY=VALUE)
 * -P 将容器内部使用的网络端口映射到我们使用的主机上。
 
-### 
+### 停止容器
+```shell
+docker stop containerName
+```
+

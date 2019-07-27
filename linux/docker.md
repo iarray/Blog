@@ -27,6 +27,13 @@ docker stop containerIdOrName
 ```
 参数: 容器的id或名称
 
+### 删除容器
+```shell
+docker rm containerIdOrName
+```
+参数: 容器的id或名称
+
+
 ### 查看正在运行的容器
 ```shell
 docker ps

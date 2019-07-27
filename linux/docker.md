@@ -28,7 +28,12 @@ docker stop containerName
 
 ### 查看正在运行的容器
 ```shell
-docker p
-
+docker ps
 ```
+
+### 查看已下载的镜像
+```shell
+docker images
+```
+
 

@@ -1,8 +1,8 @@
-1、搜索源
+### 1、搜索源
 
 docker search redis
 
-2、下载源
+### 2、下载源
 
 docker pull redis
 

@@ -53,7 +53,9 @@ startedBlock();
 
 #### 传递消息给类/实例方法
 函数调用使用中括号包住,语法如下
-> [instanceName methodName:var1:var2]
+```shell
+[instanceName methodName:var1:var2]
+```
 
 例如:
 ```object-c

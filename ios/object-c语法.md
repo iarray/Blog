@@ -75,6 +75,15 @@ ctx.method(5);
 [myObj setColorToRed: 1.0 Green: 0.8 Blue: 0.2]; //调用方法
 ```
 
+#### 消息嵌套
+```language
+UINavigationBar *bar = [[[UINavigationBar alloc] init] autorelease];
+```
+对应java版本
+```java
+UINavigationBar bar = UINavigationBar.alloc().init().autorelease();
+```
+
 
 
 ### self & super

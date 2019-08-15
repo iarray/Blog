@@ -69,6 +69,13 @@ startedBlock();
 ```java
 ctx.method(5);
 ```
+#### 带多个参数
+```language
+- (void) setColorToRed: (float)red Green: (float)green Blue:(float)blue {...} //定义方法
+[myObj setColorToRed: 1.0 Green: 0.8 Blue: 0.2]; //调用方法
+```
+
+
 
 ### self & super
 object-c中到self代表自身, 相当于java到this

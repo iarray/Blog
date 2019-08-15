@@ -45,6 +45,13 @@ object-c的关键字均以@符号标注
 ```
 
 ### 函数调用
+前文述及，不涉及面向对象时，它和C是完全一样的。以下是几个函数调用的示例：
+不带参数
+```language
+startedBlock();
+```
+
+
 在object-c中,函数调用使用中括号包住,语法如下
 > [instanceName methodName:var1:var2]
 

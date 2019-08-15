@@ -54,6 +54,10 @@ startedBlock();
 #### 传递消息给类/实例方法
 函数调用使用中括号包住,语法如下
 ```shell
+//不带参数
+[instanceName methodName]
+
+//带两个参数
 [instanceName methodName:var1:var2]
 ```
 

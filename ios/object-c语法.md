@@ -51,8 +51,8 @@ object-c的关键字均以@符号标注
 startedBlock();
 ```
 
-
-在object-c中,函数调用使用中括号包住,语法如下
+#### 传递消息给类/实例方法
+函数调用使用中括号包住,语法如下
 > [instanceName methodName:var1:var2]
 
 例如:

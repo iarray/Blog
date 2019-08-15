@@ -93,3 +93,8 @@ Objective-C的面向对象语法源自SmallTalk，消息传递（Message Passing
 Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[NSObject undefinedMethod]: unrecognized selector sent to instance 0x8871710'
 ```
 ### 字符串
+Objective-C里有字符串是由双引号包裹，并在引号前加一个@符号，例如：
+```language
+title = @"Hello";
+if(title == @"hello") {}
+```

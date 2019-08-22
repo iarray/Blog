@@ -64,6 +64,12 @@ docker ps
 docker images
 ```
 
+### 查看已下载的镜像
+```shell
+docker images
+```
+
+
 ### 查看应用输出日志
 ```shell
 docker log containerIdOrName

@@ -64,9 +64,9 @@ docker ps
 docker images
 ```
 
-### 查看已下载的镜像
+### 删除镜像镜像
 ```shell
-docker images
+docker rmi imageIdOrName
 ```
 
 

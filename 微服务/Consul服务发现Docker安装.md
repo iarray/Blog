@@ -5,5 +5,5 @@ docker pull consul
 
 ### 运行
 ```shell
-$ docker run -d --name=dev-consul -e CONSUL_BIND_INTERFACE=eth0 consul
+$ docker run -d --name=dev-consul --restart=always -e CONSUL_BIND_INTERFACE=eth0 consul
 ```

@@ -88,9 +88,10 @@ docker stats containerIdOrName
 
 ## 多容器管理 docker-compose
 ### 1.安装
-[官方安装说明](https://docs.docker.com/compose/install/
-)或者到github的release页面安装[github release](https://github.com/docker/compose/releases
-)
+[官方安装](https://docs.docker.com/compose/install/
+)或者到[github release](https://github.com/docker/compose/releases
+)页面安装
+
 ### 2.使用
 我们平时操作 docker 还是很原始的一系列动作，比如
 ```shell

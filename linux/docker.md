@@ -38,10 +38,6 @@ version是镜像的标签,一般指版本号
 * -v 目录映射(本机目录:容器内目录)
 * -e 参数设置(KEY=VALUE)
 * -P 将容器内部使用的网络端口映射到我们使用的主机上。
-* --restart=always 为了应对停电等情况影响正常web项目的访问，会把Docker容器设置为开机自动启动。 
-	* no -  容器退出时，不重启容器；
-	* on-failure - 只有在非0状态退出时才从新启动容器；
-	* always - 无论退出状态是如何，都重启容器；
 
 ### 停止容器
 ```shell
@@ -68,12 +64,6 @@ docker ps
 docker images
 ```
 
-### 删除镜像镜像
-```shell
-docker rmi imageIdOrName
-```
-
-
 ### 查看应用输出日志
 ```shell
 docker log containerIdOrName
@@ -81,25 +71,3 @@ docker log containerIdOrName
 参数: 容器的id或名称
 
 
-### 查看容器状态(cpu, 内存)
-```shell
-docker stats containerIdOrName 
-```
-
-## 多容器管理 docker-compose
-### 1.安装
-[官方安装](https://docs.docker.com/compose/install/
-)或者到[github release](https://github.com/docker/compose/releases
-)页面安装
-
-### 2.使用
-我们平时操作 docker 还是很原始的一系列动作，比如
-```shell
-1. docker pull xxxx
-2. docker run -name xx -d xxxx
-3. .....
-```
-把这一些列的动作写到docker-compose.file 里面就很好了。 你只需要写好后 只运行一句
-```
-docker-compose up -d
-```

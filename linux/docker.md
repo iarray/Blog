@@ -81,3 +81,7 @@ docker log containerIdOrName
 参数: 容器的id或名称
 
 
+### 查看容器状态(cpu, 内存)
+```shell
+docker stats containerIdOrName 
+```

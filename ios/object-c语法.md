@@ -9,11 +9,22 @@
 ### 关键字
 object-c的关键字均以@符号标注
 
+### 字符串
+Objective-C里有字符串是由双引号包裹，并在引号前加一个@符号，例如：
+```language
+title = @"Hello";
+if(title == @"hello") {}
+```
+
+
 ## 类
 ### 接口和实现
-在oc中一般类就是指接口,接口定义一般在.h文件中, 接口实现一般在.m文件中
+在oc中一般类就是指接口,接口定义一般在.h文件中, 接口实现一般在.m文件中（也有.mm的扩展名，表示Objective-C和C++混编的代码）。
 
 接口声明(以@interface开头, @end结尾)
+写在.h头文件里的方法都是公开的，Objective-C里没有私有方法的概念
+
+**MyClass.h**
 ```object-c
 @interface MyClass:NSObject{ 
   // 类变量声明
@@ -35,6 +46,8 @@ object-c的关键字均以@符号标注
 
 ```
 接口实现(以@implementation开头, @end结尾)
+
+**MyClass.m**
 ```object-c
 @implementation MyClass
 // 类方法定义
@@ -44,6 +57,26 @@ object-c的关键字均以@符号标注
 }
 @end
 ```
+
+### 继承
+继承是写在Interface定义里面的。语法为：子类名在左，父类名在右，中间用冒号分隔。 
+```language
+@interface MyClass : NSObject
+@end
+```
+
+
+### 构造实例
+```language
+mycls = [[MyClass alloc] init];
+//或者
+mycls = [MyClass new];
+
+[mycls sayHello];
+```
+* alloc：分配内存。
+* init：初始化。
+* new：代替上面两个函数：分配内存，并且初始化。
 
 ### 函数调用
 前文述及，不涉及面向对象时，它和C是完全一样的。以下是几个函数调用的示例：
@@ -122,9 +155,25 @@ Objective-C的面向对象语法源自SmallTalk，消息传递（Message Passing
 ```err
 Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[NSObject undefinedMethod]: unrecognized selector sent to instance 0x8871710'
 ```
-### 字符串
-Objective-C里有字符串是由双引号包裹，并在引号前加一个@符号，例如：
+
+### Selector
+selector就是一个方法指针
+#### 绑定控件触发的动作
 ```language
-title = @"Hello";
-if(title == @"hello") {}
+@implementation DemoViewController
+- (void)downButtonPressed:(id)sender {//响应“按钮被按下事件”的方法
+	UIButton *button = (UIButton*)sender;
+	[button setSelected:YES];
+}
+
+- (void)drawAnButton {
+	UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom]; 
+	btn.frame = _frame; 
+	btn.tag = 1;
+	btn.backgroundColor = [UIColor clearColor];
+	[btn addTarget: self
+		 action: @selector(downButtonPressed:)
+		 forControlEvents: UIControlEventTouchUpInside];//当这个按钮被按下时，触发downButtonPressed:方法
+}
+@end
 ```

@@ -90,5 +90,10 @@ docker stats containerIdOrName
 我们平时操作 docker 还是很原始的一系列动作，比如
 ```shell
 1. docker pull xxxx
-
+2. docker run -name xx -d xxxx
+3. .....
+```
+把这一些列的动作写到docker-compose.file 里面就很好了。 你只需要写好后 只运行一句
+```
+docker-compose up -d
 ```

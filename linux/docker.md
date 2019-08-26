@@ -87,6 +87,10 @@ docker stats containerIdOrName
 ```
 
 ## 多容器管理 docker-compose
+### 1.安装
+https://docs.docker.com/compose/install/
+
+### 2.使用
 我们平时操作 docker 还是很原始的一系列动作，比如
 ```shell
 1. docker pull xxxx

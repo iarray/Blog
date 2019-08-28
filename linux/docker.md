@@ -63,6 +63,16 @@ docker ps
 可选参数:
 * -l 查看最近一次创建的容器
 
+### 进入容器
+```shell
+sudo docker exec --help   
+```
+例如:
+```shell
+docker exec -it 775c7c9ee1e1 /bin/bash  
+```
+
+
 ### 查看已下载的镜像
 ```shell
 docker images

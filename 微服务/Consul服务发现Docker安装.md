@@ -17,8 +17,10 @@
 Consul 作为一种分布式服务工具，为了避免单点故障常常以集群的方式进行部署，在 Consul 集群的节点中分为 Server 和 Client 两种节点（所有的节点也被称为Agent），Server 节点保存数据，Client 节点负责健康检查及转发数据请求到 Server；Server 节点有一个 Leader 节点和多个 Follower 节点，Leader 节点会将数据同步到 Follower 节点，在 Leader 节点挂掉的时候会启动选举机制产生一个新的 Leader。
 
 Client 节点很轻量且无状态，它以 RPC 的方式向 Server 节点做读写请求的转发，此外也可以直接向 Server 节点发送读写请求。下面是 Consul 的架构图：
+![title](https://raw.githubusercontent.com/iarray/gitnote-images/master/gitnote/2019/08/29/1567049091061-1567049091065.png)
 
-
+Consule 的安装和具体使用及其他详细内容可浏览官方文档。
+下面是我用 Docker 的方式搭建了一个有3个 Server 节点和1个 Client 节点的 Consul 集群。
 
 ### 拉取镜像
 ```shell

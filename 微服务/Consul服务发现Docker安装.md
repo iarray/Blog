@@ -28,6 +28,39 @@ docker pull consul
 ```
 
 ### 运行
+安装Consul后必须运行Agent，可以选择服务器或客户端模式。每个数据中心**至少有一个服务器**（推荐3~5个服务器集群）。
+
 ```shell
+# 这是第一个 Consul 容器，其启动后的 IP 为172.17.0.5
 $ docker run -d --name=c1 -p 8500:8500 -e CONSUL_BIND_INTERFACE=eth0 consul agent --server=true --bootstrap-expect=3 --client=0.0.0.0 -ui
+
+# 再运行两个服务端,加入到第一个创建的服务端中
+docker run -d --name=c2 -e CONSUL_BIND_INTERFACE=eth0 consul agent --server=true --client=0.0.0.0 --join 172.17.0.5
+docker run -d --name=c3 -e CONSUL_BIND_INTERFACE=eth0 consul agent --server=true --client=0.0.0.0 --join 172.17.0.5
+
+# 下面是启动 Client 节点
+docker run -d --name=c4 -e CONSUL_BIND_INTERFACE=eth0 consul agent --server=false --client=0.0.0.0 --join 172.17.0.5
 ```
+启动容器时指定的环境变量 **CONSUL_BIND_INTERFACE** 其实就是相当于指定了 Consul 启动时 **--bind** 变量的参数，比如可以把启动 c1 容器的命令换成下面这样，也是一样的效果。
+```shell
+docker run -d --name=c1 -p 8500:8500 -e consul agent --server=true --bootstrap-expect=3 --client=0.0.0.0 --bind='{{ GetInterfaceIP "eth0" }}' -ui
+```
+
+参数说明
+* -node：节点的名称 
+* -bind：绑定的一个地址，用于节点之间通信的地址，可以是内外网，必须是可以访问到的地址 
+* -server：这个就是表示这个节点是个SERVER 
+* -bootstrap-expect：这个就是表示期望提供的SERVER节点数目，数目一达到，它就会被激活，然后就是LEADER了
+* -dc：指明数据中心的名字
+* -client 0.0.0.0 -ui：启动UI（为了方便后续的UI访问）
+> 注意: 例子中的bootstrap-expect定义为3, 如果启动的server端不够3个, 访问ui会提示500错误
+
+### WebUi
+[http://127.0.0.1:8500/ui](http://127.0.0.1:8500/ui)
+![title](https://raw.githubusercontent.com/iarray/gitnote-images/master/gitnote/2019/08/29/1567061435053-1567061435056.png)
+栏目解析：就是上面操作生成的一些东西
+
+1、services：放置服务
+2、nodes：放置consul节点
+3、key/value：放置一些配置信息
+4、dc1：配置数据中心

@@ -13,6 +13,8 @@ docker pull redis
 ### 3、创建并启动myredis容器(设置端口才可以连接)
 ```shell
 docker run -d -p 6379:6379 -it   --name="myredis"  redis
+
+
 ```
 
 ### 4、查看容器

@@ -1,3 +1,8 @@
+#### 拉取
+```shell
+docker pull mongo
+```
+
 `````shell
 运行
 docker run -d --network some-network --name some-mongo \

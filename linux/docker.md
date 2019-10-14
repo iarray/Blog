@@ -97,8 +97,11 @@ docker stats containerIdOrName
 ```
 
 ### 容器间连接
-```sh
+通过--link 
+```shell
+docker run -d --name db training/postgres:latestdocker run -d --name db training/postgres:latest
 
+docker run -d -P --name web --link db:db training/webapp python app.py
 ```
 
 

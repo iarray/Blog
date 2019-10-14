@@ -97,7 +97,8 @@ docker stats containerIdOrName
 ```
 
 ### 容器间连接
-通过--link 
+通过--link name:alias
+其中 name 为被链接的容器名称 alias 为链接的别名
 ```shell
 docker run -d --name db training/postgres:latestdocker run -d --name db training/postgres:latest
 

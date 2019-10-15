@@ -14,7 +14,7 @@ chmod -R 0777 $(pwd)/mosquitto/
 
 
 ### 2.配置ssl
-复制一下代码, 保存文件makefile.sh, 修改CN中的ip地址为服务器ip, 然后运行
+复制一下代码, 保存文件makefile.sh, 修改CN然后运行
 ```shell
 # * Redistributions in binary form must reproduce the above copyright
   
@@ -138,11 +138,7 @@ mkdir client
   
 mkdir certDER
   
-chmod 0777 ./ca
-chmod 0777 ./server
-chmod 0777 ./client
-chmod 0777 ./certDER
- 
+  
   
 # private key generation
   

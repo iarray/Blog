@@ -36,9 +36,10 @@ chmod -R 0777 $(pwd)/mosquitto/
 6. 配置mosquitto.conf
 ```shell
 cd $(pwd)
-nano /mosquitto/config/mosquitto.conf
+nano ./mosquitto/config/mosquitto.conf
 
-输入
+#将上面生成的ca.crt  server.crt  
+#输入
 port 8883
 cafile C:/OpenSSL-Win64/bin/ca.crt ----> 指向生成的ca文件
 certfile C:/OpenSSL-Win64/bin/server.crt

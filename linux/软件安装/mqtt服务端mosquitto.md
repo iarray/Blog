@@ -138,7 +138,11 @@ mkdir client
   
 mkdir certDER
   
-  
+chmod 0777 ./ca
+chmod 0777 ./server
+chmod 0777 ./client
+chmod 0777 ./certDER
+ 
   
 # private key generation
   

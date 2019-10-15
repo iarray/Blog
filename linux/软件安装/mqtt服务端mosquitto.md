@@ -38,12 +38,12 @@ chmod -R 0777 $(pwd)/mosquitto/
 cd $(pwd)
 nano ./mosquitto/config/mosquitto.conf
 
-#将上面生成的ca.crt  server.crt  server.key  复制到 ./mosquitto/config 目录下
+#将上面生成的ca.crt  server.crt  server.key  复制到 ./mosquitto/data 目录下
 #输入
 protocol mqtt
 cafile /mosquitto/config/ca.crt
-certfile /mosquitto/config/server.crt
-keyfile /mosquitto/config/server.key
+certfile /mosquitto/data/server.crt
+keyfile /mosquitto/data/server.key
 allow_anonymous true
 require_certificate true
 use_identity_as_username true
@@ -54,5 +54,5 @@ use_identity_as_username true
 ### 3.运行
 ```shell
 
-docker run --name mqttsrv -it -p 8883:8883 -p 9001:9001 -v $(pwd)/mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf -v $(pwd)/mosquitto/data:/mosquitto/data -v $(pwd)/mosquitto/log:/mosquitto/log eclipse-mosquitto
+docker run --name mqttsrv -it -p 8883:8883 -p 1883:1883 -p 9001:9001 -v $(pwd)/mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf -v $(pwd)/mosquitto/data:/mosquitto/data -v $(pwd)/mosquitto/log:/mosquitto/log eclipse-mosquitto
 ```

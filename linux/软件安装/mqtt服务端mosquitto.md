@@ -39,6 +39,7 @@ cd $(pwd)
 nano ./mosquitto/config/mosquitto.conf
 
 #将上面生成的ca.crt  server.crt  server.key  复制到 ./mosquitto/data 目录下
+
 #输入
 protocol mqtt
 cafile /mosquitto/data/ca.crt

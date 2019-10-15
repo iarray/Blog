@@ -41,9 +41,9 @@ nano ./mosquitto/config/mosquitto.conf
 #将上面生成的ca.crt  server.crt  server.key  复制到 ./mosquitto/config 目录下
 #输入
 port 8883
-cafile C:/OpenSSL-Win64/bin/ca.crt ----> 指向生成的ca文件
-certfile C:/OpenSSL-Win64/bin/server.crt
-keyfile C:/OpenSSL-Win64/bin/server.key
+cafile mosquitto/config/ca.crt
+certfile mosquitto/config/server.crt
+keyfile mosquitto/config/server.key
 allow_anonymous true
 require_certificate true
 use_identity_as_username true

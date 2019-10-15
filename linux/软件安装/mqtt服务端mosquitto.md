@@ -14,7 +14,11 @@ chmod -R 0777 $(pwd)/mosquitto/
 
 
 ### 2.配置ssl
+1. openssl req -new -x509 -days 36500 -extensions v3_ca -keyout ca.key -out ca.crt 
+	* 根据提示输入密码
+	* 再次确认密码
 
+2. 
 
 ### 3.运行
 ```shell

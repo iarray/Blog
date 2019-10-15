@@ -33,6 +33,13 @@ chmod -R 0777 $(pwd)/mosquitto/
   openssl req -out client.csr -key client.key -new
   openssl x509 -req -in client.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out client.crt -days 36500
 
+6. 配置mosquitto.conf
+```shell
+nano $(pwd)/mosquitto/config/mosquitto.conf
+
+
+```
+
 
 
 ### 3.运行

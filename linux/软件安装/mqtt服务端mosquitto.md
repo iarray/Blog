@@ -17,8 +17,9 @@ chmod -R 0777 $(pwd)/mosquitto/
 1. openssl req -new -x509 -days 36500 -extensions v3_ca -keyout ca.key -out ca.crt 
 	* 根据提示输入密码
 	* 再次确认密码
-
-2. 
+	* 后面直接回车略过
+2. openssl genrsa -out server.key 2048
+3. 
 
 ### 3.运行
 ```shell

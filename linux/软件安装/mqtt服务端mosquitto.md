@@ -29,6 +29,8 @@ chmod -R 0777 $(pwd)/mosquitto/
 4. 为mosquitto server产生一个证书文件
   openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out server.crt -days 36500
 
+5. 重复2-4步骤, 把server改成client, 生成client证书
+
 ### 3.运行
 ```shell
 

@@ -25,7 +25,9 @@ chmod -R 0777 $(pwd)/mosquitto/
 	* 根据提示输入两次密码
 3. 为mosquitto server产生一个签发证书的请求文件“server.csr”
   openssl req -out server.csr -key server.key -new
-4. 
+	* 根据提示输入两次密码
+4. 为mosquitto server产生一个证书文件
+  openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out server.crt -days 36500
 
 ### 3.运行
 ```shell

@@ -21,7 +21,10 @@ chmod -R 0777 $(pwd)/mosquitto/
 	* 后面直接回车略过
 2. 为mosquittoserver产生一个私钥文件server.key
   openssl genrsa -out server.key 2048
-3. openssl genrsa -des3 -out server.key 2048
+  openssl genrsa -des3 -out server.key 2048
+	* 根据提示输入两次密码
+3. 为mosquitto server产生一个签发证书的请求文件“server.csr”
+  openssl req -out server.csr -key server.key -new
 4. 
 
 ### 3.运行

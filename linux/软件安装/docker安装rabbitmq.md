@@ -1,5 +1,5 @@
 ```
-docker run -d --hostname my-rabbit --name my-rabbit -p 8787:15672 -p 1883:1883 -p 5672:5672 -e RABBITMQ_DEFAULT_USER=iarray -e RABBITMQ_DEFAULT_PASS=Gb123123 rabbitmq:3-management
+docker run -d --hostname my-rabbit --name my-rabbit -p 8787:15672 -p 1883:1883 -p 5672:5672 -e RABBITMQ_DEFAULT_USER=test -e RABBITMQ_DEFAULT_PASS=123456 rabbitmq:3-management
 
 docker exec <容器ID> rabbitmq-plugins list
 

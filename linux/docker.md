@@ -86,7 +86,7 @@ docker rmi imageIdOrName
 
 ### 查看应用输出日志
 ```shell
-docker log containerIdOrName
+docker logs containerIdOrName
 ```
 参数: 容器的id或名称
 

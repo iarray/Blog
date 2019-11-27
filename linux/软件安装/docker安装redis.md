@@ -14,7 +14,7 @@ docker pull redis
 ```shell
 docker run -d -p 6379:6379 -it   --name="myredis"  redis
 
-docker run -d --name myredis -p 6379:6379 redis --requirepass "mypassword"
+docker run -d --name myredis -p 6379:6379 --restart=always redis --requirepass "mypassword"
 ```
 
 ### 4、查看容器

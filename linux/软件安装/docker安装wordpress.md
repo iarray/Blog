@@ -13,7 +13,7 @@ docker pull wordpress
 ```shell
 cd /root
 mkdir mysql-data
-docker run --name mysql-wordpress -d -p 8844:3306 -v /root/mysql-data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 mysql:5.7
+docker run --name mysql-wordpress -d --restart=always -p 8844:3306 -v /root/mysql-data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 mysql:5.7
 ```
 解释一下参数，
 * --name就是给容器取名字。
@@ -27,7 +27,7 @@ docker run --name mysql-wordpress -d -p 8844:3306 -v /root/mysql-data/mysql:/var
 ```shell
 cd /root
 mkdir wordpress-html
-docker run --name mywp -d -p 8846:80 --link mysql-wordpress:mysql -v /root/wordpress-html:/var/www/html wordpress
+docker run --name mywp -d --restart=always -p 8080:80 --link mysql-wordpress:mysql -v /root/wordpress-html:/var/www/html wordpress
 
 ```
 

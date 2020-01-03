@@ -9,7 +9,7 @@
 2. 启动容器
 
    ```
-   docker run --name postgres -e POSTGRES_PASSWORD=123456 --restart=always -d postgres
+   docker run --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=123456 --restart=always -d postgres
    ```
 
    

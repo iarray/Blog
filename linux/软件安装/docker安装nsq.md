@@ -6,11 +6,17 @@ docker pull nsqio/nsq
 
 ### 2. 启动nsq lookup 进程守护
 
+nsqlookupd是守护进程负责管理拓扑信息。客户端通过查询 nsqlookupd 来发现指定话题（topic）的生产者，并且 nsqd 节点广播话题（topic）和通道（channel）信息
+
+简单的说nsqlookupd就是中心管理服务，它使用tcp(默认端口4160)管理nsqd服务，使用http(默认端口4161)管理nsqadmin服务。同时为客户端提供查询功能, 提供一个http查询服务，给客户端定时更新nsqd的地址目录 
+
 ```
 docker run -d --name lookupd -p 4160:4160 -p 4161:4161 --restart=always nsqio/nsq /nsqlookupd
 ```
 
 ### 3. 启动nsq
+
+ nsqd 是一个守护进程，负责接收，排队，投递消息给客户端 
 
 假设lookup运行在192.168.0.105上
 
@@ -63,9 +69,18 @@ docker run -d --net=nsq --name nsqadmin -p 4171:4171 nsqio/nsq /nsqadmin --looku
 ### 6. 注意防火墙端口开启
 
 ```
+#nsqd 端口
+ufw allow 4150
+ufw allow 4151
+
+#nsqlookupd 端口
 ufw allow 4160
 ufw allow 4161
+
+#nsqadmin 端口
 ufw allow 4171
 ufw allow 4170
 ```
+
+
 
